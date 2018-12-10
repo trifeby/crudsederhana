@@ -1,0 +1,59 @@
+@extends('layouts.master')
+
+@section('content')
+	<div class="container">
+				<form method="post" action="{{url('bihero/update')}}">
+					{{csrf_field()}}
+					<input class="form-control" name="id" type="hidden" value="{{$bihero->id}}">
+					<div class="row">
+						<div class="col-md-4"></div>
+							<div class="form-group col-md-4">
+							<label for="nama">NAMA</label>
+							<input type="text" class="form-control" name="nama" value="{{$bihero->nama}}">
+							</div>
+						</div>
+						<div class="row">
+						<div class="col-md-4"></div>
+							<div class="form-group col-md-4">
+							<label for="asal">asal</label>
+							<input type="text" class="form-control" name="asal" value="{{$bihero->asal}}">
+							</div>
+						</div>
+						<div class="row">
+						<div class="col-md-4"></div>
+							<div class="form-group col-md-4">
+							<label for="lahirwafat">lahirwafat</label>
+							<input type="text" class="form-control" name="lahirwafat" value="{{$bihero->lahirwafat}}">
+							</div>
+						</div>
+						<div class="row">
+						<div class="col-md-4"></div>
+							<div class="form-group col-md-4">
+							<label for="penetapan">penetapan</label>
+							<input type="text" class="form-control" name="penetapan" value="{{$bihero->penetapan}}">
+							</div>
+						</div>
+						<div class="row">
+						<div class="col-md-4"></div>
+							<div class="form-group col-md-4">
+							<label for="ringkasan">ringkasan</label>
+							<textarea type="text" class="form-control" name="ringkasan">{{$bihero->ringkasan}}</textarea>
+							</div>
+						</div>
+						<div class="row">
+						<div class="col-md-4"></div>
+							<div class="form-group col-md-4">
+							<label for="penjelasan">penjelasan</label>
+							<textarea type="text" class="form-control" name="penjelasan">{{$bihero->penjelasan}}</textarea> 
+							</div>
+						</div>
+						<dir 	class="row">
+							<div class="col-md-4"></div>
+								<div class="form-group col-md-4">
+									<button type="submit" class="btn btn-success" style="margin:120px">UPDATE</button>
+							</div>
+						</div>
+					</form>
+			</div>
+		</div>
+@endsection
